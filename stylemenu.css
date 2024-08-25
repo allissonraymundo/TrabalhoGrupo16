@@ -1,0 +1,20 @@
+body {
+    height: 100vh;
+  
+    background-color: rgb(94, 189, 176);
+}
+    h1{
+        font-family:sans-serif;
+        color:black;
+    text-align: center;
+font-size: 400%
+;}
+
+p{text-align: center;
+font-size: 250%;}
+
+button{font-size: 80px;
+    border-radius: 20px;}
+#facil{color: green;}
+#normal{color: yellow;}
+#dificil{color: red;}

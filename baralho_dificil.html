@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Jogo da memória</title>
+    
+</head> 
+
+
+<body>
+    <button>
+        <a href="index.html">Voltar</a>
+    </button>
+    <h1>Jogo da memória </h1> 
+
+    <div class="cronometro">
+        <p id="tempo">00:00:00</p>
+      </div>
+    
+
+    <main class="memory-game">
+        <style>
+            .card {
+    height: calc( 35% - 10px);
+    width: calc(20% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d; /* adiciona perspectiva 3d, para que o elemento nao fique achatada no plano */
+    transition: transform .9s; /* adiciona efeito de movimento ao flip do card */
+    
+}
+        </style>
+
+        <div class="card" data-card="Azcopa">
+            <img class="card-front" src="img/AzCopas.jpeg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        
+        </div>
+
+        <div class="card" data-card="Azpaus">
+            <img class="card-front" src="img/AzPaus.png" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        
+        </div>
+
+        <div class="card" data-card="Azouro">
+            <img class="card-front" src="img/AzOuro.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        
+        </div>
+
+        <div class="card" data-card="Azespada">
+            <img class="card-front" src="img/AzEspada.png" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        
+        </div>
+    
+        <div class="card" data-card="DamaCopa">
+            <img class="card-front" src="./img/DamaCopa.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        
+        </div>
+ 
+        <div class="card" data-card="DamaPaus">
+            <img class="card-front" src="./img/DamaPaus.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        </div>
+        <div class="card" data-card="ReiPaus">
+            <img class="card-front" src="./img/ReiPaus.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        </div>
+        <div class="card" data-card="reicopa">
+            <img class="card-front" src="./img/reicopa.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        </div>
+        <div class="card" data-card="ValetCopa">
+            <img class="card-front" src="./img/ValetCopa.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        </div>
+        <div class="card" data-card="ValetPaus">
+            <img class="card-front" src="./img/ValetPaus.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        </div>
+
+        <div class="card" data-card="Azcopa">
+            <img class="card-front" src="img/AzCopas.jpeg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        
+        </div>
+
+        <div class="card" data-card="Azpaus">
+            <img class="card-front" src="img/AzPaus.png" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        
+        </div>
+
+        <div class="card" data-card="Azouro">
+            <img class="card-front" src="img/AzOuro.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        
+        </div>
+
+        <div class="card" data-card="Azespada">
+            <img class="card-front" src="img/AzEspada.png" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        
+        </div>
+        <div class="card" data-card="DamaCopa">
+            <img class="card-front" src="./img/DamaCopa.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        </div>
+        <div class="card" data-card="DamaPaus">
+            <img class="card-front" src="./img/DamaPaus.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        </div>
+        <div class="card" data-card="ReiPaus">
+            <img class="card-front" src="./img/ReiPaus.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+        </div>
+        <div class="card" data-card="reicopa">
+            <img class="card-front" src="./img/reicopa.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+            
+        </div>
+        <div class="card" data-card="ValetCopa">
+            <img class="card-front" src="./img/ValetCopa.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+            
+        </div>
+        <div class="card" data-card="ValetPaus">
+            <img class="card-front" src="./img/ValetPaus.jpg" alt="Face da carta">
+            <img class="card-back" src="./img/box.jpg" alt="Verso da carta">
+            
+        </div>
+    
+        
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
